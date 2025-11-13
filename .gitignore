@@ -1,0 +1,89 @@
+# NixOS AI Server - .gitignore
+
+# NixOS build artifacts
+result/
+result-*/
+
+# Nix garbage collection
+.nix-defexpr/
+.nix-profile/
+
+# Hardware-specific configuration (should be generated per machine)
+hardware-configuration.nix
+
+# User-specific files
+*.secret
+*.key
+*.pem
+*.crt
+
+# Model files (large binary files)
+*.gguf
+*.bin
+*.safetensors
+models/
+*.model
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+dist/
+target/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Docker
+.dockerignore
+
+# Systemd user services
+~/.config/systemd/user/llama-cpp.service
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache directories
+.cache/
+cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
